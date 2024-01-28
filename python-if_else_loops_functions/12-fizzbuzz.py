@@ -8,4 +8,4 @@ def fizzbuzz():
         elif nbr % 5 == 0 and nbr % 3 == 0:
             print("FizzBuzz ", end="")
         else:
-            print(nbr, ' ', end="")
+            print(f"{nbr}", end=" ")
