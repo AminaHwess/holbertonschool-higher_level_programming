@@ -5,4 +5,4 @@ for n in range(0, 10):
             if ((n*10 + idx != 89) and (idx*10 + n != 89)):
                 print("{}{}, ".format(n, idx), end="")
             else:
-                print("{}{}".format(n, idx), end="")
+                print("{}{}".format(n, idx))
