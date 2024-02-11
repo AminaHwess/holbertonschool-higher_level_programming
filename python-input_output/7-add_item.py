@@ -16,4 +16,4 @@ if filename:
     filee = load_from_json_file(filename)
 else:
     filee = []
-save_to_json_file(filee + sys.argv[1:], filename)
+save_to_json_file(list(filee + sys.argv[1:]), filename)
