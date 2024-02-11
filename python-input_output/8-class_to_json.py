@@ -3,7 +3,6 @@
 """
 turn class obj into JSON str rep
 """
-import json
 
 
 def class_to_json(obj):
