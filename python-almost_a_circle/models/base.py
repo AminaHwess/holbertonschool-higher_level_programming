@@ -11,7 +11,7 @@ class Base:
 
     __nb_objects = 0
     """
-    Private class attribute.
+    Private class attribute
     """
 
     def __init__(self, id=None):
