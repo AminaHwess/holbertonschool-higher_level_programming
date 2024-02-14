@@ -70,7 +70,7 @@ class Rectangle(Base):
     def display(self):
         """Print rectangle instance in stdout"""
         for j in range(self.__y):
-            print(" ")
+            print("")
         for i in range(self.__height):
             x = self.__x * " " + "#" * self.__width
             print(x)
