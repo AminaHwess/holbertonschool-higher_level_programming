@@ -22,19 +22,19 @@ class Rectangle(base):
 
     @property
     def x(self):
-        return self.__x
+        return self.x
 
     @property
     def y(self):
-        return self.__y
+        return self.y
 
     @property
     def width(self):
-        return self.__width
+        return self.width
 
     @property
     def height(self):
-        return self.__height
+        return self.height
 
     @height.setter
     def height(self, value):
