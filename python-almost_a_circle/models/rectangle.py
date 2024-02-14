@@ -3,10 +3,9 @@
 Class : Rectangle
 """
 
-base = __import__('base').base
+from models.base import Base
 
-
-class Rectangle(base):
+class Rectangle(Base):
     """
     Class Rectangle
     Set private instance attributes
