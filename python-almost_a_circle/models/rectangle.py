@@ -22,19 +22,19 @@ class Rectangle(base):
 
     @property
     def x(self):
-        return self.x
+        return self.__x
 
     @property
     def y(self):
-        return self.y
+        return self.__y
 
     @property
     def width(self):
-        return self.width
+        return self.__width
 
     @property
     def height(self):
-        return self.height
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -49,7 +49,7 @@ class Rectangle(base):
         if not isinstance(value, int):
             raise TypeError("x must be an integer")
         if value < 0:
-            raise ValueError("x must be >= 0")
+            raise ValueError("x must be > 0")
         self.__x = value
 
     @width.setter
