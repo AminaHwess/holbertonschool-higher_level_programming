@@ -6,7 +6,7 @@ Class : Rectangle
 from models.base import base
 
 
-class rectangle(base):
+class Rectangle(base):
     """
     Class Rectangle
     Set private instance attributes
