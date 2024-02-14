@@ -1,0 +1,19 @@
+"""
+>>> integer_validator("name", "John")
+[TypeError] name must be an integer
+
+>>> integer_validator("age", 0)
+[ValueError] age must be greater than 0
+
+>>> integer_validator("distance", -4)
+[ValueError] distance must be greater than 0
+
+>>> integer_validator("age", 'oki')
+[TypeError] age must be an integer
+
+>>> integer_validator("age", 8)
+Nothing
+
+>>> integer_validator("name", 58)
+Nothing
+"""

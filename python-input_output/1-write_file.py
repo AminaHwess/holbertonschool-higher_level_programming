@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """
-write and create file and print it to stdout
+append text to file
 """
-
-
-def write_file(filename="", text=""):
+def append_write(filename="", text=""):
     """
-    write and create file and print it to stdout
+    append text to file
     """
-    with open(filename, mode="w+", encoding="UTF8") as f:
-        s = f.read()
-        f.write(text)
+    with open(filename, mode="a", encoding="UTF8") as f:
+        f.read(text)
         return len(text)
