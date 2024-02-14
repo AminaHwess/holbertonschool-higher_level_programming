@@ -3,7 +3,7 @@
 Class : Rectangle
 """
 
-from models.base import base
+base = __import__('base').base
 
 
 class Rectangle(base):
