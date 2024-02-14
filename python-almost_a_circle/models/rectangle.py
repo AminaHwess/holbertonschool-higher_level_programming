@@ -1,9 +1,21 @@
 #!/usr/bin/python3
+"""
+Class : Rectangle
+"""
 
 from models.base import base
 
+"""
+Create class Rectangle that inherits from Base
+"""
+
 
 class Rectangle(base):
+    """
+    Class Rectangle
+    Set private instance attributes
+    SetClass constructor
+    """
 
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -15,12 +27,10 @@ class Rectangle(base):
         @property
         def x(self):
             return self.__x
-        
 
         @property
         def y(self):
             return self.__y
-
 
         @property
         def width(self):
