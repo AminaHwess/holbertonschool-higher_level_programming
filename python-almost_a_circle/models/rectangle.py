@@ -1,21 +1,13 @@
 #!/usr/bin/python3
-"""
-Class : Rectangle
-"""
+""" module"""
 
 from models.base import Base
 
 class Rectangle(Base):
-    """
-    Class Rectangle
-    Set private instance attributes
-    SetClass constructor
-    """
-
+    """Class Rectangle """
+    
     def __init__(self, width, height, x=0, y=0, id=None):
-        """
-        constructor of the class
-        """
+        """ constructor of the class """
         super().__init__(id)
         self.width = width
         self.height = height
