@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 """
-Creating a first class : Base.
+Creating a first class : base.
 """
 
 
-class Base:
+class base:
     """
-    Class : Base.
+    Class : base.
     """
 
     __nb_objects = 0
@@ -21,5 +21,5 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            Base.__nb_objects += 1
-            self.id = Base.__nb_objects
+            base.__nb_objects += 1
+            self.id = base.__nb_objects
