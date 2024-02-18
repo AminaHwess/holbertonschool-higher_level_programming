@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Defines a class BaseModelTest"""
 
-
 import json
 import unittest
 import os
@@ -211,3 +210,6 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(str(r1), str(r2))
         self.assertFalse(r1 is r2)
         self.assertFalse(r1 == r2)
+
+if __name__ == "__main__":
+    unittest.main()
