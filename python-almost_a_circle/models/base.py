@@ -56,12 +56,13 @@ class Base:
             return []
         else:
             return json.loads(json_string)
-        
+
     @classmethod
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         from models.rectangle import Rectangle
         from models.square import Square
+
         if cls is Rectangle:
             obj = Rectangle(1, 2, 3, 4, 5)
         elif cls is Square:
@@ -71,3 +72,14 @@ class Base:
         obj.update(**dictionary)
         return obj
 
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        if not filename:
+            return []
+        else:
+            with open(filename, mode="r") as f:
+                jslist = cls.from_json_string(f.read())
+            lista = [cls.create(**obj) for obj in jslist]
+            return lista
