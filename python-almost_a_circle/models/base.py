@@ -81,5 +81,7 @@ class Base:
         else:
             with open(filename, mode="r") as f:
                 jslist = cls.from_json_string(f.read())
-            lista = [cls.create(**obj) for obj in jslist]
+            lista = []
+            for obj in jslist:
+                lista.append(cls.create(**obj))
             return lista
