@@ -61,11 +61,7 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         from models.rectangle import Rectangle
-        from models.square import Square
 
-        if cls is Rectangle:
-            obj = Rectangle(1, 2, 3, 4, 5)
-        if cls is Square:
-            obj = Square(1, 2, 3, 4)
+        obj = Rectangle(1, 2, 3, 4, 5)
         obj.update(**dictionary)
         return obj
