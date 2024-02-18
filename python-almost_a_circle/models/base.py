@@ -62,9 +62,6 @@ class Base:
         """returns an instance with all attributes already set"""
         from models.rectangle import Rectangle
 
-        obj = Rectangle(1, 2, 3, 4, 5)
-        if obj is None:
-            return None
-        else:
-            obj.update(**dictionary)
-        return obj
+        cls = Rectangle(1, 2, 3, 4, 5)
+        cls.update(**dictionary)
+        return cls
