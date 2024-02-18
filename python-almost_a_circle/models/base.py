@@ -63,5 +63,8 @@ class Base:
         from models.rectangle import Rectangle
 
         obj = Rectangle(1, 2, 3, 4, 5)
-        obj.update(**dictionary)
+        if obj is None:
+            return None
+        else:
+            obj.update(**dictionary)
         return obj
