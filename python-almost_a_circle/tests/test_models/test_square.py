@@ -8,7 +8,7 @@ from models.square import Square
 
 
 class TestSquare_instantiation(unittest.TestCase):
-    """Unittests for testing instantiation """
+    """Unittests for testing instantiation"""
 
     def test_is_base(self):
         self.assertIsInstance(Square(10), Base)
@@ -61,7 +61,7 @@ class TestSquare_instantiation(unittest.TestCase):
 
 
 class TestSquare_size(unittest.TestCase):
-    """Unittests for testing size initialization """
+    """Unittests for testing size initialization"""
 
     def test_None_size(self):
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
@@ -268,7 +268,7 @@ class TestSquare_stdout(unittest.TestCase):
 
 
 class TestSquare_update_args(unittest.TestCase):
-    """Unittests for testing update args method """
+    """Unittests for testing update args method"""
 
     def test_update_args_zero(self):
         s = Square(10, 10, 10, 10)
@@ -466,7 +466,7 @@ class TestSquare_to_dictionary(unittest.TestCase):
 
     def test_to_dictionary_output(self):
         s = Square(10, 2, 1, 1)
-        correct = {'id': 1, 'x': 2, 'size': 10, 'y': 1}
+        correct = {"id": 1, "x": 2, "size": 10, "y": 1}
         self.assertDictEqual(correct, s.to_dictionary())
 
     def test_to_dictionary_no_object_changes(self):

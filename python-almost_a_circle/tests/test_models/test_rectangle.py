@@ -57,12 +57,14 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(TypeError) as x:
             r0 = Rectangle(5)
-        msg = "Rectangle.__init__() missing 1 required positional argument: 'height'"
+        msg = "Rectangle.__init__() missing 1 required \
+            positional argument: 'height'"
         self.assertEqual(msg, str(x.exception))
 
         with self.assertRaises(TypeError) as x:
             r1 = Rectangle()
-        msg = "Rectangle.__init__() missing 2 required positional arguments: 'width' and 'height'"
+        msg = "Rectangle.__init__() missing 2 required \
+            positional arguments: 'width' and 'height'"
         self.assertEqual(msg, str(x.exception))
 
     def test_2_3(self):
@@ -119,10 +121,12 @@ class TestRectangle(unittest.TestCase):
 
         with self.assertRaises(TypeError) as x:
             r1 = Rectangle(3, 2)
-            r1.area("Hello")  # Remove the argument here
+            r1.area("Hello")
         self.assertEqual(
-            "Rectangle.area() takes 1 positional argument but 2 were given", str(
-                x.exception))
+            "Rectangle.area() takes 1 positional argument but 2 were given",
+            str(x.exception),
+        )
+
     def test_5_0(self):
         """Test for public method display."""
 
@@ -189,17 +193,18 @@ class TestRectangle(unittest.TestCase):
         """Test for public method update with wrong types in kwargs."""
 
         r1 = Rectangle(10, 10, 10, 10)
-        
+
         with self.assertRaises(TypeError) as x:
             r1.update(height=65, x=2, width="hi")
-        
+
         self.assertEqual("width must be an integer", str(x.exception))
+
     def test_13_0(self):
         """Test for public method to_dictionary."""
 
         r1 = Rectangle(10, 2, 1, 9)
         r1_dictionary = r1.to_dictionary()
-        r_dictionary = {'x': 1, 'y': 9, 'id': 1, 'height': 2, 'width': 10}
+        r_dictionary = {"x": 1, "y": 9, "id": 1, "height": 2, "width": 10}
         self.assertEqual(len(r1_dictionary), len(r_dictionary))
         self.assertEqual(type(r1_dictionary), dict)
         r2 = Rectangle(1, 1)
@@ -212,12 +217,13 @@ class TestRectangle(unittest.TestCase):
     def test_13_1(self):
         """Test for public method to_dictionary with wrong args."""
 
-        s = "Rectangle.to_dictionary() takes 1 positional argument but 2 were given"
+        s = "Rectangle.to_dictionary() takes 1 \
+            positional argument but 2 were given"
         with self.assertRaises(TypeError) as x:
             r1 = Rectangle(10, 2, 1, 9)
             r1_dictionary = r1.to_dictionary("Hi")
         self.assertEqual(s, str(x.exception))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
