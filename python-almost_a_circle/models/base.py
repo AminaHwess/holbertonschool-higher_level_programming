@@ -76,12 +76,10 @@ class Base:
     def load_from_file(cls):
         """returns a list of instances"""
         filename = cls.__name__ + ".json"
-        if not filename:
-            return []
-        else:
+        try:
             with open(filename, mode="r") as f:
                 jslist = cls.from_json_string(f.read())
-            lista = []
-            for obj in jslist:
-                lista.append(cls.create(**obj))
+            lista = [cls.create(**obj) for obj in jslist]
             return lista
+        except FileNotFoundError:
+            return []
