@@ -66,6 +66,8 @@ class Base:
             obj = Rectangle(1, 2, 3, 4, 5)
         if cls is Square:
             obj = Square(1, 2, 3, 4)
+        if cls is None:
+            obj = None
         obj.update(**dictionary)
         return obj
 
