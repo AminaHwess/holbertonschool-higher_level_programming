@@ -64,9 +64,9 @@ class Base:
         from models.square import Square
 
         if cls is Rectangle:
-            obj = Rectangle(1, 2, 3, 4, 5)
+            obj = Rectangle(1, 2)
         elif cls is Square:
-            obj = Square(1, 2, 3, 4)
+            obj = Square(1)
         else:
             obj = None
         obj.update(**dictionary)
