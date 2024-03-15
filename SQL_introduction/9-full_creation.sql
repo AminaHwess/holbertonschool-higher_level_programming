@@ -4,5 +4,8 @@ CREATE TABLE IF NOT EXISTS second_table(
     name VARCHAR(256),
     score INT
 );
-INSERT INTO first_table (id, id, id, id, name, name, name, name, score, score, score, score)
-VALUES ('1', '2', '3', '4', 'John', 'Alex', 'Bob', 'George', '10', '3', '14', '8');
+INSERT INTO first_table (id, name, score)
+VALUES  ('1', 'John', '10')
+        ('2', 'Alex', '3')
+        ('3', 'Bob', '14')  
+        ('4', 'George', '8');
