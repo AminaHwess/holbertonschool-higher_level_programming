@@ -22,10 +22,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    states = session.query(State).filter_by(name=sys.argv[4])
+    states = session.query(State).filter_by(name=sys.argv[4]).first()
     if states:
-        for state in states:
-            print(state.id)
+        print(states.id)
     else:
         print("Not found")
 
